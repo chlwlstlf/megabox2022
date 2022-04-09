@@ -1,0 +1,307 @@
+@charset "utf-8";
+
+/* 레이아웃 */
+* {
+    box-sizing: border-box;
+}
+body {
+    overflow: auto;
+    overflow-y: scroll;
+    letter-spacing: 0;
+    line-height: 1.5;
+    font-size: 15px;
+    color: #444;
+    font-weight: 400;
+    font-family: NanumBarunGothic,Dotum,'돋움',sans-serif;
+}
+
+/* 헤더 로고 */
+.body-wrap {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+#header {
+    background: rgba(0,0,0,0.3);
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    min-width: 1100px;
+    height: 91px;
+}
+#header .main-header {
+    position: absolute;
+    left: 0;
+    right: inherit;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+#header .ci {
+    position: absolute;
+    left: 50%;
+    top: 23px;
+    width: 140px;
+    height: 90px;
+    margin: 0 0 0 -70px;
+}
+#header .ci a {
+    display: block;
+    width: 140px;
+    height: 47px;
+    font-size: 0;
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/ci/logo-white_new2.png);
+}
+
+/* 유틸리티 영역 */
+#header .util-area:after, #header .util-area:before {
+    content: '';
+    display: table;
+}
+#header .util-area:after {
+    clear: both;
+}
+#header .util-area {
+    position: relative;
+    width: 1100px;
+    margin: 0 auto;
+}
+#header .util-area a {
+    color: #888;
+}
+#header .util-area a:hover {
+    text-decoration: underline;
+}
+
+/* 유틸리티 왼쪽 영역 */
+#header .util-area .left-link {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    font-size: .8667em;
+}
+#header .util-area .left-link a {
+    float: left;
+    margin-right: 20px;
+    vertical-align: top;
+}
+
+/* 유틸리티 오른쪽 영역 */
+#header .util-area .right-link {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    font-size: .8667em;
+}
+#header .util-area .right-link a {
+    float: left;
+    margin-left: 20px;
+    vertical-align: top;
+}
+
+/* 링크 영역 */
+#header .link-area:after, #header .link-area:before {
+    content: '';
+    display: table;
+}
+#header .link-area:after {
+    clear: both;
+}
+#header .link-area {
+    position: relative;
+    width: 1100px;
+    margin: 0 auto;
+}
+#header .link-area a {
+    display: block;
+    position: absolute;
+    top: 42px;
+    width: 36px;
+    height: 36px;
+    font-size: 0;
+    line-height: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+#header .link-area a.btn-layer-sitemap {
+    left: 0;
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-sitemap-white.png);
+}
+#header .link-area a.btn-layer-search {
+    left: 40px;
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-search-white.png);
+}
+#header .link-area a.link-ticket {
+    right: 40px;
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-schedule-white.png);
+}
+#header .link-area a.btn-layer-mymega {
+    right: 0;
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-mymega-white.png);
+}
+#header .link-area a.on {
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/btn/btn-header-layer-close.png)!important;
+}
+
+/* 내브 영역 */
+#header #gnb {
+    background-color: rgba(0,0,0,.2);
+    height: 0;
+}
+#gnb > ul {
+    position: relative;
+    width: 1100px;
+    margin: 90px auto 0 auto;
+}
+ul {
+    list-style-type: none;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+#gnb ul li {
+    display: list-item;
+}
+#gnb>ul>li>a {
+    position: absolute;
+    top: -38px;
+    height: 38px;
+    text-indent: -9999px;
+    background-position: center 0;
+    background-repeat: no-repeat;
+}
+#gnb .gnb-depth1{
+    padding:0;
+}
+#gnb .gnb-depth2 {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 44px;
+}
+#gnb .gnb-depth2 ul {
+    overflow: hidden;
+    display: block;
+    margin: 0;
+}
+#gnb .gnb-depth2 ul li a {
+    overflow: hidden;
+    display: block;
+    height: 44px;
+    line-height: 44px;
+    color: #fff;   
+    font-family: NanumBarunGothic,Dotum,'돋움',sans-serif;
+}
+#gnb .gnb-depth2 ul li a:focus, #gnb .gnb-depth2 ul li a:hover {
+    text-decoration: underline;
+}
+#gnb .gnb-depth2 ul li:first-child {
+    margin-left: 0;
+}
+#gnb .gnb-depth2 ul li {
+    display: block;
+    float: left;
+    margin-left: 19px;
+    
+}
+#gnb .gnb-depth1 li:hover .gnb-depth2{
+    display: block;
+}
+#gnb .gnb-depth1>li.current>a:after, #gnb .gnb-depth1>li>a:hover:after, #gnb .gnb-depth1>li>a:focus:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+}
+
+/* 내브 영화 영역 */
+#gnb>ul>li:nth-child(1)>a {
+    left: 166px;
+}
+#header #gnb>ul>li>a.gnb-txt-movie {
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/gnb/gnb-txt-movie-white.png);
+}
+#gnb>ul>li>a.gnb-txt-movie {
+    width: 30px;
+}
+#header #gnb>ul>li:nth-child(1) .gnb-depth2 ul {
+    padding-left: 50px;
+}
+
+/* 내브 예매 영역 */
+#gnb>ul>li:nth-child(2)>a {
+    left: 256px;
+}
+#header #gnb>ul>li>a.gnb-txt-reserve {
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/gnb/gnb-txt-reserve-white.png);
+}
+#gnb>ul>li>a.gnb-txt-reserve {
+    width: 30px;
+}
+#header #gnb>ul>li:nth-child(2) .gnb-depth2 ul {
+    padding-left: 166px;
+}
+
+/* 내브 극장 영역 */
+#gnb>ul>li:nth-child(3)>a {
+    left: 345px;
+}
+#header #gnb>ul>li>a.gnb-txt-theater {
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/gnb/gnb-txt-theater-white.png);
+}
+#gnb>ul>li>a.gnb-txt-theater {
+    width: 31px;
+}
+#header #gnb>ul>li:nth-child(3) .gnb-depth2 ul {
+    padding-left: 300px;
+}
+
+/* 내브 이벤트 영역 */
+#gnb>ul>li:nth-child(4)>a {
+    right: 347px;
+}
+#header #gnb>ul>li>a.gnb-txt-event {
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/gnb/gnb-txt-event-white.png);
+}
+#gnb>ul>li>a.gnb-txt-event {
+    width: 45px;
+}
+#header #gnb>ul>li:nth-child(4) .gnb-depth2 ul {
+    padding-left: 598px;
+}
+
+/* 내브 스토어 영역 */
+#gnb>ul>li:nth-child(5)>a {
+    right: 241px;
+}
+#header #gnb>ul>li>a.gnb-txt-store {
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/gnb/gnb-txt-store-white.png);
+}
+#gnb>ul>li>a.gnb-txt-store {
+    width: 44px;
+}
+
+/* 내브 혜택 영역 */
+#gnb>ul>li:nth-child(6)>a {
+    right: 150px;
+}
+#header #gnb>ul>li>a.gnb-txt-benefit {
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/gnb/gnb-txt-benefit-white.png);
+}
+#gnb>ul>li>a.gnb-txt-benefit {
+    width: 29px;
+}
+#header.no-bg #gnb>ul>li:nth-child(6) .gnb-depth2 ul {
+    background-position: 760px 0;
+}
+#header #gnb>ul>li:nth-child(6) .gnb-depth2 ul {
+    padding-left: 834px;
+}
+
+
+
