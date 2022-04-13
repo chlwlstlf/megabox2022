@@ -138,9 +138,6 @@ body {
     right: 0;
     background-image: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-mymega-white.png);
 }
-#header .link-area a.on {
-    background-image: url(https://img.megabox.co.kr/static/pc/images/common/btn/btn-header-layer-close.png)!important;
-}
 
 /* 내브 영역 */
 #header #gnb {
@@ -295,9 +292,6 @@ ul {
 }
 #gnb>ul>li>a.gnb-txt-benefit {
     width: 29px;
-}
-#header.no-bg #gnb>ul>li:nth-child(6) .gnb-depth2 ul {
-    background-position: 760px 0;
 }
 #header #gnb>ul>li:nth-child(6) .gnb-depth2 ul {
     padding-left: 834px;
