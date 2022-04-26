@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <meta name="author" content="webstoryboy">
+   <meta name="description" content="메가박스 사이트 따라하면서 배우는 튜토리얼입니다.">
+   <meta name="keywords" content="메가박스, 유투브, 영화, 최신영화, 영화관, CGV, 롯데시네마, 웹스토리보이, 웹스, 사이트 만들기, 따라하기">
+   <title>메가박스 사이트 코딩하기</title>
+
+   <!-- CSS -->
+   <link rel="stylesheet" href="assets/css/reset02.css">
+   <link rel="stylesheet" href="assets/css/style02.css">
+    
+   <!-- 파비콘 -->
+   <link rel="shortcut icon" href="assets/icons/favicon.ico">
+   <link rel="apple-touch-icon-precomposed" href="assets/icons/favicon_72.png" />
+   <link rel="apple-touch-icon-precomposed" sizes="96x96" href="assets/icons/favicon_96.png" />
+   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/icons/favicon_144.png" />
+   <link rel="apple-touch-icon-precomposed" sizes="192x192" href="assets/icons/favicon_192.png" />
+    
+   <!-- 페이스북 메타 태그 -->
+   <meta property="og:title" content="메가박스 사이트 만들기" />
+   <meta property="og:url" content="https://github.com/webstoryboy/megabox2019" />
+   <meta property="og:image" content="https://webstoryboy.github.io/megabox2019/mega.jpg" />
+   <meta property="og:description" content="메가박스 사이트 따라하면서 배우는 튜토리얼입니다." />
+   
+   <!-- 트위터 메타 태그 -->
+   <meta name="twitter:card" content="summary">
+   <meta name="twitter:title" content="메가박스 사이트 만들기">
+   <meta name="twitter:url" content="https://github.com/webstoryboy/megabox2019/">
+   <meta name="twitter:image" content="https://webstoryboy.github.io/megabox2019/mega.jpg">
+   <meta name="twitter:description" content="메가박스 사이트 따라하면서 배우는 튜토리얼입니다.">
+
+   <!-- 웹 폰트 -->
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    
+   <!-- HTLM5shiv ie6~8 -->
+   <!--[if lt IE 9]> 
+      <script src="assets/js/html5shiv.min.js"></script>
+      <script type="text/javascript">
+         alert("현재 브라우저는 지원하지 않습니다. 크롬 브라우저를 추천합니다.!");
+      </script>
+   <![endif]-->
+</head>
+<body>
+   <div class ="body-wrap">
+      <header id="header" class="main-header">
+         <h1 class="ci"><a href="https://chlwlstlf.github.io/megabox2022/index01.html" title="MEGABOX 메인으로 가기">MEGABOX : Life Theater</a></h1>
+         <div class="util-area">
+            <div class="left-link">
+               <a href="https://www.megabox.co.kr/benefit/viplounge" title="VIP LOUNGE">VIP LOUNGE</a>
+               <a href="https://www.megabox.co.kr/benefit/membership" title="멤버십">멤버십</a>
+               <a href="https://www.megabox.co.kr/support" title="고객센터">고객센터</a>
+            </div>
+            <div class="right-link">
+               <div class="before">
+                  <a href="javaScript:fn_viewLoginPopup('default','pc')" title="로그인">로그인</a>
+                  <a href="https://www.megabox.co.kr/join" title="회원가입">회원가입</a>
+                  <a href="https://www.megabox.co.kr/booking">빠른예매</a>
+               </div>
+            </div>
+         </div>
+         <!--// util-area -->
+
+         <div class="link-area">
+            <a href="#layer_sitemap" class="header-open-layer btn-layer-sitemap" title="사이트맵">사이트맵</a>
+            <a href="#layer_header_search" class="header-open-layer btn-layer-search" title="검색">검색</a>
+            <a href="https://www.megabox.co.kr/booking/timetable" class="link-ticket" title="상영시간표">상영시간표</a>
+            <a href="#layer_mymega" class="header-open-layer btn-layer-mymega" title="나의 메가박스">나의 메가박스</a>
+         </div>  
+         <!--// link-area --> 
+
+         <nav id="gnb">
+            <ul class="gnb-depth1">
+               <li><a href="https://www.megabox.co.kr/movie" class="gnb-txt-movie" title="영화">영화</a>
+                  <div class="gnb-depth2">
+                     <ul>
+                        <li><a href="https://www.megabox.co.kr/movie" title="전체영화">전체영화</a></li>
+                        <li><a href="https://www.megabox.co.kr/curation/specialcontent" title="큐레이션">큐레이션</a></li>
+                        <li><a href="https://www.megabox.co.kr/moviepost/all" title="무비포스트">무비포스트</a></li>
+                     </ul>
+                  </div>
+               </li>
+               <li><a href="https://www.megabox.co.kr/booking" class="gnb-txt-reserve" title="예매">예매</a>
+                  <div class="gnb-depth2">
+                     <ul>
+                        <li><a href="https://www.megabox.co.kr/booking" title="빠른예매">빠른예매</a></li>
+                        <li><a href="https://www.megabox.co.kr/booking/timetable" title="상영시간표">상영시간표</a></li>
+                        <li><a href="https://www.megabox.co.kr/booking/privatebooking" title="더 부티크 프라이빗 예매">더 부티크 프라이빗 예매</a></li>
+                     </ul>
+                  </div>
+               </li>
+               <li><a href="https://www.megabox.co.kr/theater/list" class="gnb-txt-theater" title="극장">극장</a>
+                  <div class="gnb-depth2">
+                     <ul>
+                        <li><a href="https://www.megabox.co.kr/theater/list" title="전체극장">전체극장</a></li>
+                        <li><a href="https://www.megabox.co.kr/specialtheater/list" title="특별관">특별관</a></li>
+                     </ul>
+                  </div>
+               </li>
+               <li><a href="https://www.megabox.co.kr/event" class="gnb-txt-event" title="이벤트">이벤트</a>
+                  <div class="gnb-depth2">
+                     <ul>
+                        <li><a href="https://www.megabox.co.kr/event" title="진행중 이벤트">진행중 이벤트</a></li>
+                        <li><a href="https://www.megabox.co.kr/event/end" title="지난 이벤트">지난 이벤트</a></li>
+                        <li><a href="https://www.megabox.co.kr/event/winner/list?currPage=1&searchText=&" title="당첨자발표">당첨자발표</a></li>
+                     </ul>
+                  </div>
+               </li>
+               <li><a href="https://www.megabox.co.kr/store" class="gnb-txt-store" title="스토어">스토어</a></li>
+               <li><a href="https://www.megabox.co.kr/benefit/membership" class="gnb-txt-benefit" title="혜택">혜택</a>
+                  <div class="gnb-depth2">
+                     <ul>
+                        <li><a href="https://www.megabox.co.kr/benefit/membership" title="메가박스 멤버십">메가박스 멤버십</a></li>
+                        <li><a href="https://www.megabox.co.kr/benefit/discount/guide" title="제휴/할인">제휴/할인</a></li>
+                     </ul>
+                  </div>
+               </li>
+            </ul>
+         </nav>
+         <!--// gnb -->
+
+      </header>
+
+      <div class="container main-container area-ad">
+         <div id="contents">
+            <div class="main-page">
+               <div id="main_section01" class="section main-movie on">
+
+                  <div class="bg">
+                     <div class="bg-pattern"></div>
+                        <img src="https://img.megabox.co.kr/SharedImg/2021/02/19/okUapomTH55SjMeqMug0ptST8WpBW05N_380.jpg" alt="중경삼림 리마스터링_스페셜 포스터(3월4일대개봉).jpg" onerror="noImg(this, 'main');">
+                  </div>
+
+                  <div class="cont-area">
+                     <div class="tab-sorting">
+                        <button type="button" class="on" sort="boxoRankList" name="btnSort">박스오피스</button>
+                     </div>
+                     <a href="https://www.megabox.co.kr/movie" class="more-movie" title="더 많은 영화보기">
+                        더 많은 영화보기 
+                        <i class="iconset ico-more-corss gray"></i>
+                     </a>
+         
+                     <!-- main-movie-list -->
+                     <div class="main-movie-list">
+                        <ol class="list">
+                           <li name="li_boxoRankList" class="first">
+                              <a href="javascript:gfn_moveDetail('00136300')" class="movie-list-info" title="영화상세 보기">
+                                 <div class="screen-type2">
+                                    <p><img src="https://www.megabox.co.kr/static/pc/images/common/btn/mov_top_tag_mx.png" alt="mx"></p>
+                                 </div>
+                                 <p class="rank">1<span class="ir">위</span></p>
+                                    <img src="https://img.megabox.co.kr/SharedImg/2021/02/16/D7gnxzwZhk6AonutaH0zUFdEEzvpiE5l_420.jpg" alt="중경삼림" class="poster" onerror="noImg(this, 'main');">
+                                 <div class="wrap">
+                                    <div class="summary">
+                                       1994년 홍콩,
+                                       <br>
+                                       <br>
+                                       “내 사랑의 유통기한은 만 년으로 하고 싶다”
+                                       <br>
+                                       만우절의 이별 통보가 거짓말이길 바라며 술집을 찾은 경찰 223
+                                       <br>
+                                       고단한 하루를 보내고 술집에 들어온 금발머리의 마약밀매상
+                                       <br>
+                                       <br>
+                                       "그녀가 떠난 후 이 방의 모든 것들이 슬퍼한다"
+                                       <br>
+                                       여자친구가 남긴 이별 편지를 외면하고 있는 경찰 663
+                                       <br>
+                                       편지 속에 담긴 그의 아파트 열쇠를 손에 쥔 단골집 점원 페이
+                                       <br>
+                                       <br>
+                                       네 사람이 만들어낸 두 개의 로맨스
+                                       <br>
+                                       새로운 사랑을 만나는 방법에 대한 독특한 상상력
+                                    </div>
+                                    <div class="score">
+                                       <div class="preview">
+                                          <p class="tit">관람평</p>
+                                          <p class="number">9.3<span class="ir">점</span></p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </a>
+                              <div class="btn-util">
+                                 <button type="button" class="button btn-like" rpst-movie-no="00136300">
+                                    <i title="보고싶어 설정 안함" class="iconset ico-heart-toggle-gray"></i>
+                                    601
+                                 </button>
+                                 <div class="case">
+                                    <a href="javascript:moveBokdPage('00136300');" class="button gblue" title="영화 예매하기">예매</a>
+                                 </div>
+                              </div>
+                           </li>
+                           <li name="li_boxoRankList">
+                              <a href="javascript:gfn_moveDetail('22012400')" class="movie-list-info" title="영화상세 보기">
+                                 <div class="screen-type2">
+                                    <p><img src="https://www.megabox.co.kr/static/pc/images/common/btn/mov_top_tag_db.png" alt="dolby"></p>
+                                    <p><img src="https://www.megabox.co.kr/static/pc/images/common/btn/mov_top_tag_mx.png" alt="mx"></p>
+                                 </div>
+                                 <p class="rank">2<span class="ir">위</span></p>
+                                    <img src="https://img.megabox.co.kr/SharedImg/2022/03/25/p02Tj8NeXivFyhGgMGm3DD0kdeogGkkA_420.jpg" alt="신비한 동물들과 덤블도어의 비밀" class="poster" onerror="noImg(this, 'main');">
+                                 <div class="wrap">
+                                    <div class="summary">
+                                       가장 위험한 마법에 맞선, 세상을 구할 전쟁이 시작된다!
+                                       <br>
+                                       <br>
+                                       1930년대, 제2차 세계대전에 마법사들이 개입하게 되면서
+                                       <br>
+                                       <br>
+                                       강력한 어둠의 마법사 그린델왈드의 힘이 급속도로 커진다.
+                                       <br>
+                                       <br>
+                                       덤블도어는 뉴트 스캐맨더에게 위대한 마법사 가문 후손,
+                                       <br>
+                                       <br>
+                                       마법학교의 유능한 교사, 머글 등으로 이루어진 팀에게 임무를 맡긴다.
+                                       <br>
+                                       <br>
+                                       이에 뉴트와 친구들은 머글과의 전쟁을 선포한
+                                       <br>
+                                       <br>
+                                       그린델왈드와 추종자들, 그의 위험한 신비한 동물들에 맞서 세상을 구할 거대한 전쟁에 나선다.
+                                       <br>
+                                       <br>
+                                       한편 전쟁의 위기가 최고조로 달한 상황 속에서 덤블도어는
+                                       <br>
+                                       <br>
+                                       더 이상 방관자로 머물 수 없는 순간을 맞이하고, 서서히 숨겨진 비밀이 드러나는데…
+                                    </div>
+                                    <div class="score">
+                                       <div class="preview">
+                                          <p class="tit">관람평</p>
+                                          <p class="number">8.1<span class="ir">점</span></p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </a>
+                              <div class="btn-util">
+                                 <button type="button" class="button btn-like" rpst-movie-no="22012400">
+                                    <i title="보고싶어 설정 안함" class="iconset ico-heart-toggle-gray"></i>
+                                       1.4k
+                                 </button>
+                                 <div class="case">
+                                    <a href="javascript:moveBokdPage('22012400');" class="button gblue" title="영화 예매하기">예매</a>
+                                 </div>
+                              </div>            
+                           </li>
+                           <li name="li_boxoRankList">
+                              <a href="javascript:gfn_moveDetail('21089900')" class="movie-list-info" title="영화상세 보기">
+                                 <div class="screen-type2">
+                                    <p><img src="https://www.megabox.co.kr/static/pc/images/common/btn/mov_top_tag_db.png" alt="dolby"></p>
+                                    <p><img src="https://www.megabox.co.kr/static/pc/images/common/btn/mov_top_tag_mx.png" alt="mx"></p>
+                                 </div>
+                                 <p class="rank">3<span class="ir">위</span></p>
+                                    <img src="https://img.megabox.co.kr/SharedImg/2022/03/22/0RODnWCM5UyviP0Q4tkVlcHOo5jSwMNX_420.jpg" alt="로스트 시티" class="poster" onerror="noImg(this, 'main');">
+                                 <div class="wrap">
+                                    <div class="summary">
+                                       전설의 트레저를 차지하기 위해 재벌 페어팩스(다니엘 래드클리프)는 유일한 단서를 알고 있는 베스트셀러 작가 로레타(산드라 블록)를 납치하게 된다. 어쩔 수 없는 비지니스 관계로 사라진 그녀를 찾아야만 하는 책 커버모델 앨런(채닝 테이텀)은 의문의 파트너(브래드 피트)와 함께 위험한 섬에서 그녀를 구하고 무사히 탈출해야만 하는데…
+                                       <br>
+                                       <br>
+                                       적과 자연의 위험이 도사리는 일촉즉발 화산섬
+                                       <br>
+                                       <br>
+                                       대환장 케미의 그들이 생존하여 섬을 탈출할 수 있을까?
+                                       <br>
+                                    </div>
+                                    <div class="score">
+                                       <div class="preview">
+                                          <p class="tit">관람평</p>
+                                          <p class="number">0<span class="ir">점</span></p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </a>
+                              <div class="btn-util">
+                                 <button type="button" class="button btn-like" rpst-movie-no="21089900">
+                                    <i title="보고싶어 설정 안함" class="iconset ico-heart-toggle-gray"></i>
+                                       429
+                                 </button>
+                                 <div class="case">
+                                    <a href="javascript:moveBokdPage('21089900');" class="button gblue" title="영화 예매하기">예매</a>
+                                 </div>
+                              </div>
+                           </li>
+                           <li name="li_boxoRankList">
+                              <a href="javascript:gfn_moveDetail('22015100')" class="movie-list-info" title="영화상세 보기">
+                                 <div class="screen-type2">
+                                    <p><img src="https://www.megabox.co.kr/static/pc/images/common/btn/mov_top_tag_mx.png" alt="mx"></p>
+                                 </div>
+                                 <p class="rank">4<span class="ir">위</span></p>
+                                    <img src="https://img.megabox.co.kr/SharedImg/2022/04/04/Df3dRsIiNGeqWKx9GyXFNgHJixH0ipb9_420.jpg" alt="앵커" class="poster" onerror="noImg(this, 'main');">
+                                 <div class="wrap">
+                                    <div class="summary">
+                                       “제 죽음이 정세라 앵커의 입을 통해 보도되면 너무 기쁠 것 같아요”
+                                       <br>
+                                       <br>
+                                       생방송 5분 전, 방송국 간판 앵커 ‘세라’(천우희)에게
+                                       <br>
+                                       자신이 살해될 것이라며 죽음을 예고하는 제보전화가 걸려온다.
+                                       <br>
+                                       장난전화로 치부하기에는 찝찝한 마음을 감출 수 없는 ‘세라’.
+                                       <br>
+                                       진짜 앵커가 될 기회라는 엄마 ‘소정’(이혜영)의 말에
+                                       <br>
+                                       ‘세라’는 제보자의 집으로 향하고 제보자인 ‘미소’와 그녀의 딸의 시체를 목격한다.
+                                       <br>
+                                       <br>
+                                       그날 이후, ‘세라’의 눈앞에 죽은 ‘미소’의 모습이 자꾸만 떠오르기 시작한다.
+                                       <br>
+                                       사건 현장에서 미소의 주치의였던 정신과 의사 ‘인호’(신하균)를 마주하게 되며
+                                       <br>
+                                       그에 대한 ‘세라’의 의심 또한 깊어지는데…
+                                       <br>
+                                       <br>
+                                       완벽했던 앵커를 뒤흔들 충격적인 진실을 확인하라!
+                                    </div>
+                                    <div class="score">
+                                       <div class="preview">
+                                          <p class="tit">관람평</p>
+                                          <p class="number">7.9<span class="ir">점</span></p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </a>
+                              <div class="btn-util">
+                                 <button type="button" class="button btn-like" rpst-movie-no="22015100">
+                                    <i title="보고싶어 설정 안함" class="iconset ico-heart-toggle-gray"></i>
+                                       226
+                                 </button>
+                                 <div class="case">
+                                    <a href="javascript:moveBokdPage('22015100');" class="button gblue" title="영화 예매하기">예매</a>
+                                 </div>
+                              </div>
+                           </li>
+                        </ol>              
+                     </div>
+                     <!--// main-movie-list -->
+         
+                     <div class="search-link">
+                        <div class="cell">
+                           <div class="search">
+                              <input type="text" placeholder="영화명을 입력해 주세요" title="영화 검색" class="input-text" id="movieName">
+                              <button type="button" class="btn" id="btnSearch"><i class="iconset ico-search-w"></i> 검색</button>
+                           </div>
+                        </div>
+                        <div class="cell"><a href="/booking/timetable" title="상영시간표 보기"><i class="iconset ico-schedule-main"></i> 상영시간표</a></div>
+                        <div class="cell"><a href="/movie" title="박스오피스 보기"><i class="iconset ico-boxoffice-main"></i> 박스오피스</a></div>
+                        <div class="cell"><a href="/booking" title="빠른예매 보기"><i class="iconset ico-quick-reserve-main"></i> 빠른예매</a></div>
+                     </div>
+                     <div class="moving-mouse move">
+                        <img class="iconset" alt="" src="https://www.megabox.co.kr/static/pc/images/common/ico/ico-mouse.png">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   
+         
+      
+
+    
+   <!-- 자바스크립트 라이브러리 -->
+   <script src="assets/js/jquery.min_1.12.4.js"></script>
+   <script src="assets/js/modernizr-custom.js"></script>
+   <script src="assets/js/ie-checker.js"></script>
+   <script src="assets/js/index02.js"></script>
+</body>
+</html>

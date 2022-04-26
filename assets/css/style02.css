@@ -1,0 +1,733 @@
+@charset "utf-8";
+
+/* 레이아웃 */
+* {
+    box-sizing: border-box;
+}
+body {
+    overflow: auto;
+    overflow-y: scroll;
+    letter-spacing: 0;
+    line-height: 1.5;
+    font-size: 15px;
+    color: #444;
+    font-weight: 400;
+    font-family: NanumBarunGothic,Dotum,'돋움',sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+/* 헤더 로고 */
+.body-wrap {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+#header {
+    background: rgba(0, 0, 0);
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    min-width: 1100px;
+    height: 91px;
+}
+
+#header .main-header {
+    position: absolute;
+    left: 0;
+    right: inherit;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+#header .ci {
+    position: absolute;
+    left: 50%;
+    top: 23px;
+    width: 140px;
+    height: 90px;
+    margin: 0 0 0 -70px;
+}
+#header .ci a {
+    display: block;
+    width: 140px;
+    height: 47px;
+    font-size: 0;
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/ci/logo-white_new2.png);
+}
+
+/* 유틸리티 영역 */
+#header .util-area:after, #header .util-area:before {
+    content: '';
+    display: table;
+}
+#header .util-area:after {
+    clear: both;
+}
+#header .util-area {
+    position: relative;
+    width: 1100px;
+    margin: 0 auto;
+}
+#header .util-area a {
+    color: #888;
+}
+#header .util-area a:hover {
+    text-decoration: underline;
+}
+
+/* 유틸리티 왼쪽 영역 */
+#header .util-area .left-link {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    font-size: .8667em;
+}
+#header .util-area .left-link a {
+    float: left;
+    margin-right: 20px;
+    vertical-align: top;
+}
+
+/* 유틸리티 오른쪽 영역 */
+#header .util-area .right-link {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    font-size: .8667em;
+}
+#header .util-area .right-link a {
+    float: left;
+    margin-left: 20px;
+    vertical-align: top;
+}
+
+/* 링크 영역 */
+#header .link-area:after, #header .link-area:before {
+    content: '';
+    display: table;
+}
+#header .link-area:after {
+    clear: both;
+}
+#header .link-area {
+    position: relative;
+    width: 1100px;
+    margin: 0 auto;
+}
+#header .link-area a {
+    display: block;
+    position: absolute;
+    top: 42px;
+    width: 36px;
+    height: 36px;
+    font-size: 0;
+    line-height: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+#header .link-area a.btn-layer-sitemap {
+    left: 0;
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-sitemap-white.png);
+}
+#header .link-area a.btn-layer-search {
+    left: 40px;
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-search-white.png);
+}
+#header .link-area a.link-ticket {
+    right: 40px;
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-schedule-white.png);
+}
+#header .link-area a.btn-layer-mymega {
+    right: 0;
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-mymega-white.png);
+}
+
+/* 내브 영역 */
+#header #gnb {
+    background-color: rgba(0,0,0,.2);
+    height: 0;
+}
+#gnb > ul {
+    position: relative;
+    width: 1100px;
+    margin: 90px auto 0 auto;
+}
+ul {
+    list-style-type: none;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+#gnb ul li {
+    display: list-item;
+}
+#gnb>ul>li>a {
+    position: absolute;
+    top: -38px;
+    height: 38px;
+    text-indent: -9999px;
+    background-position: center 0;
+    background-repeat: no-repeat;
+}
+#gnb .gnb-depth1{
+    padding:0;
+}
+#gnb .gnb-depth2 {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 44px;
+    z-index: 998;
+}
+#gnb .gnb-depth2 ul {
+    overflow: hidden;
+    display: block;
+    margin: 0;
+}
+#gnb .gnb-depth2 ul li a {
+    overflow: hidden;
+    display: block;
+    height: 44px;
+    line-height: 44px;
+    color: #fff;   
+    font-family: NanumBarunGothic,Dotum,'돋움',sans-serif;
+}
+#gnb .gnb-depth2 ul li a:focus, #gnb .gnb-depth2 ul li a:hover {
+    text-decoration: underline;
+}
+#gnb .gnb-depth2 ul li:first-child {
+    margin-left: 0;
+}
+#gnb .gnb-depth2 ul li {
+    display: block;
+    float: left;
+    margin-left: 19px;
+    
+}
+#gnb .gnb-depth1 li:hover .gnb-depth2{
+    display: block;
+}
+#gnb .gnb-depth1>li.current>a:after, #gnb .gnb-depth1>li>a:hover:after, #gnb .gnb-depth1>li>a:focus:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+}
+
+/* 내브 영화 영역 */
+#gnb>ul>li:nth-child(1)>a {
+    left: 166px;
+}
+#header #gnb>ul>li>a.gnb-txt-movie {
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/gnb/gnb-txt-movie-white.png);
+}
+#gnb>ul>li>a.gnb-txt-movie {
+    width: 30px;
+}
+#header #gnb>ul>li:nth-child(1) .gnb-depth2 ul {
+    padding-left: 50px;
+}
+
+/* 내브 예매 영역 */
+#gnb>ul>li:nth-child(2)>a {
+    left: 256px;
+}
+#header #gnb>ul>li>a.gnb-txt-reserve {
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/gnb/gnb-txt-reserve-white.png);
+}
+#gnb>ul>li>a.gnb-txt-reserve {
+    width: 30px;
+}
+#header #gnb>ul>li:nth-child(2) .gnb-depth2 ul {
+    padding-left: 166px;
+}
+
+/* 내브 극장 영역 */
+#gnb>ul>li:nth-child(3)>a {
+    left: 345px;
+}
+#header #gnb>ul>li>a.gnb-txt-theater {
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/gnb/gnb-txt-theater-white.png);
+}
+#gnb>ul>li>a.gnb-txt-theater {
+    width: 31px;
+}
+#header #gnb>ul>li:nth-child(3) .gnb-depth2 ul {
+    padding-left: 300px;
+}
+
+/* 내브 이벤트 영역 */
+#gnb>ul>li:nth-child(4)>a {
+    right: 347px;
+}
+#header #gnb>ul>li>a.gnb-txt-event {
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/gnb/gnb-txt-event-white.png);
+}
+#gnb>ul>li>a.gnb-txt-event {
+    width: 45px;
+}
+#header #gnb>ul>li:nth-child(4) .gnb-depth2 ul {
+    padding-left: 598px;
+}
+
+/* 내브 스토어 영역 */
+#gnb>ul>li:nth-child(5)>a {
+    right: 241px;
+}
+#header #gnb>ul>li>a.gnb-txt-store {
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/gnb/gnb-txt-store-white.png);
+}
+#gnb>ul>li>a.gnb-txt-store {
+    width: 44px;
+}
+
+/* 내브 혜택 영역 */
+#gnb>ul>li:nth-child(6)>a {
+    right: 150px;
+}
+#header #gnb>ul>li>a.gnb-txt-benefit {
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/gnb/gnb-txt-benefit-white.png);
+}
+#gnb>ul>li>a.gnb-txt-benefit {
+    width: 29px;
+}
+#header #gnb>ul>li:nth-child(6) .gnb-depth2 ul {
+    padding-left: 834px;
+}
+
+/* 메인 */
+.main-container {
+    width: 100%;
+    height: 100%;
+    min-width: 1100px;
+    padding-bottom: 200px;
+}
+.container.area-ad {
+    margin-top: -172px;
+    padding-top: 172px;
+}
+.container {
+    width: 100%;
+    min-height: 100%;
+    margin: -92px 0 -200px 0;
+    padding: 92px 0 300px 0;
+}
+#contents {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.main-page {
+    overflow: hidden;
+    position: relative;
+    margin-top: 0;
+}
+
+/* 섹션01 */
+.main-movie {
+    display: block;
+    position: relative;
+    min-height: 830px;
+    padding: 0 0 80px 0;
+}
+.main-movie .bg {
+    overflow: hidden;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    min-width: 1100px;
+    height: 100%;
+    margin: 0 auto;
+    background-color:rgba(0, 0, 0, 0.5);
+}
+.main-movie .bg .bg-pattern {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://www.megabox.co.kr/static/pc/images/movie/bg-movie-detail-pattern.png) repeat 0 0;   
+}
+.main-movie .bg img {
+    display: block;
+    width: 100%;
+    filter: blur(15px);
+}
+
+/* 섹션01 메인 영화 리스트 */
+.main-movie .cont-area {
+    overflow: hidden;
+    display: block;
+    position: relative;
+    z-index: 3;
+    width: 1100px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 0 50px 0;
+}
+.main-movie .tab-sorting {
+    margin: 79px 0 20px 0;
+    text-align: center;
+}
+.main-movie .tab-sorting button.on {
+    color: #fff;
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+}
+.main-movie .tab-sorting button {
+    position: relative;
+    display: inline-block;
+    margin: 0 18px;
+    padding: 0 0 5px 0;
+    vertical-align: top;
+    color: #aaa;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    background-color: transparent;
+    font-size: 1.01em;
+}
+.main-movie .cont-area .more-movie i {
+    margin-left: 4px;
+}
+.ico-more-corss.gray {
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-more-cross-gray.png);
+}
+.ico-more-corss {
+    width: 16px;
+    height: 16px;
+}
+.iconset {
+    overflow: hidden;
+    display: inline-block;
+    margin: -1px 0 0 0;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: middle;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+.main-movie .cont-area .more-movie {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 87px;
+    color: #aaa;
+    line-height: 16px;
+}
+.main-movie .cont-area .more-movie a:hover {
+    text-decoration: underline;
+}
+.main-movie-list {
+    height: 398px;
+}
+.main-movie-list > ol {
+    display: block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.main-movie-list > ol:before, .main-movie-list > ol:after {
+    content: '';
+    display: table;
+}
+.main-movie-list > ol:after {
+    clear: both;
+}
+.main-movie-list > ol li.first {
+    margin-left: 0;
+}
+.main-movie-list > ol li {
+    float: left;
+    width: 245px;
+    margin-left: 40px;
+    padding: 0;
+    height: 100%;
+}
+.main-movie-list > ol li .movie-list-info {
+    overflow: hidden;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 352px;
+    border-radius: 5px;
+    background-color: #24202b;
+}
+.main-movie-list > ol li .movie-list-info img.poster {
+    display: block;
+    width: 245px;
+    height: 352px;
+    border-radius: 5px;
+}
+.main-movie-list > ol li .movie-list-info .screen-type2 p {
+    height: 35px;
+    display: inline-block;
+    margin: 0 0 0 4px;
+    padding: 8px;
+    border-radius: 3px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.6);
+}
+.main-movie-list > ol li .movie-list-info .screen-type2 {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.main-movie-list > ol li .movie-list-info .rank {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 150px;
+    color: #fff;
+    padding: 10px 0 0 15px;
+    line-height: 1.1;
+    font-size: 2em;
+    font-style: italic;
+    font-family: 'Roboto';
+    font-weight: 300;
+    color: #fff;
+    text-shadow: 2px 2px 2px rgb(0 0 0 / 80%);
+    background: url(https://www.megabox.co.kr/static/pc/images/main/bg-main-movie-rank.png) no-repeat 0 0;
+}
+.ir {
+    text-indent: -9999px;
+    position: fixed;
+    top: -9999px;
+    font-size: 1px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+.button {
+    display: inline-block;
+    text-align: center;
+    font-weight: 400;
+    border-radius: 4px;
+    font-family: NanumBarunGothic,Dotum,'돋움',sans-serif;
+    text-decoration: none;
+    border: 1px solid #503396;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.main-movie-list > ol li .btn-util {
+    overflow: hidden;
+    position: relative;
+    margin-top: 10px;
+    padding: 0 0 0 85px;
+    text-align: left;
+    height: 36px;
+}
+.main-movie-list > ol li .btn-util .btn-like {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 36px;
+    line-height: 34px;
+    margin: 0;
+    padding: 0 5px;
+    color: #fff;
+    font-size: 0.8667em;
+    border-color: #555;
+    background-color: rgba(0,0,0,0.4);
+}
+.main-movie-list > ol li .btn-util .btn-like .ico-heart-toggle-gray {
+    background-image: url(https://www.megabox.co.kr/static/pc/images/common/ico/ico-heart-toggle-main.png);
+}
+.button>i:first-child {
+    margin-left: 0;
+    margin-right: 4px;
+}
+.button>i {
+    margin-top: -2px;
+    margin-left: 4px;
+}
+.ico-heart-toggle-gray {
+    width: 17px;
+    height: 15px;
+}
+button {
+    text-transform: none;
+    overflow: visible;
+}
+.main-movie-list > ol li .btn-util .case .button {
+    display: block;
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 4px;
+}
+.button.gblue {
+    color: #fff;
+    line-height: 36px;
+    border: 0;
+    background: #037b94;
+}
+
+a.button {
+    text-decoration: none;
+}
+
+/* 섹션01 메인 영화 검색 */
+.main-movie .search-link {
+    overflow: hidden;
+    display: block;
+    height: 75px;
+    margin: 50px 0 0 0;
+    padding: 23px 0 0 0;
+    background-color: rgba(0,0,0,0.2);
+}
+.main-movie .search-link .cell:first-child {
+    border-left: 0;
+}
+.main-movie .search-link .cell {
+    position: relative;
+    float: left;
+    width: 25%;
+    text-align: center;
+    border-left: 1px solid #423e3e;
+}
+.main-movie .search-link .search {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 30px;
+    padding: 0 30px 0 0;
+    border-bottom: 1px solid #423e3e;
+}
+.main-movie .search-link .search .input-text {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background-color: transparent;
+    color: #fff;
+    padding: 0 10px;
+    line-height: 30px;
+}
+.main-movie .search-link .search .btn {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 100%;
+    font-size: 0;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+}
+.ico-search-w {
+    width: 18px;
+    height: 18px;
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-search-white.png);
+}
+.main-movie .search-link a .iconset {
+    margin-top: -2px;
+    margin-right: 5px;
+}
+.ico-schedule-main {
+    width: 24px;
+    height: 26px;
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-schedule-main.png);
+}
+.main-movie .search-link a {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    line-height: 30px;
+    color: #fff;
+}
+.main-movie .cont-area a:hover {
+    text-decoration: underline;
+}
+.ico-boxoffice-main {
+    width: 26px;
+    height: 24px;
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-boxoffice-main.png);
+}
+.ico-quick-reserve-main {
+    width: 29px;
+    height: 25px;
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-quick-reserve-main.png);
+}
+.main-movie-list > ol li .movie-list-info .wrap {
+    display: none;
+    opacity: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: 25px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.8);
+}
+.main-movie-list > ol li .movie-list-info .wrap .summary {
+    overflow: hidden;
+    height: 152px;
+}
+.main-movie-list > ol li .movie-list-info:hover .wrap {
+    display: block;
+}
+.main-movie-list > ol li .movie-list-info .wrap .score {
+    overflow: hidden;
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 0 0 0;
+    text-align: center;
+    border-top: 1px solid #3c3c3c;
+    text-align: center;
+}
+.main-movie-list > ol li .movie-list-info .wrap .score .preview {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    line-height: 36px;
+}
+.main-movie-list > ol li .movie-list-info .wrap .score .preview .tit {
+    display: block;
+    float: left;
+    margin: 0 19px 0 0;
+    font-size: 0.8667em;
+}
+.main-movie-list > ol li .movie-list-info .wrap .score .preview .number {
+    float: left;
+    font-size: 1.6em;
+    color: #59bec9;
+}
+.main-movie .moving-mouse {
+    position: relative;
+    width: 100%;
+    height: 24px;
+    margin: 30px 0 0 0;
+    text-align: center;
+}
+.main-movie .moving-mouse .iconset{
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin: 0 0 0 -8px;
+    width: 16px;
+    height: 24px;
+}
+@keyframes mousemove {
+    0% {top:0}
+    80% {top:10px}
+    100% {top:10px}
+}
+.move {
+    animation: mousemove 0.75s linear infinite alternate;
+}
